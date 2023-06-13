@@ -77,13 +77,13 @@ class TShirt extends Clothes implements MaleClothes, FemaleClothes {
 
     @Override
     public void dressMan() {
-        System.out.println("Мужская футболка размера " + getSize().name() + ", стоимостью " + getCost() +
+        System.out.println("Мужская футболка размера " + getSize() + ", стоимостью " + getCost() +
                 ", цвета " + getColor());
     }
 
     @Override
     public void dressWoman() {
-        System.out.println("Женская футболка размера " + getSize().name() + ", стоимостью " + getCost() +
+        System.out.println("Женская футболка размера " + getSize()+ ", стоимостью " + getCost() +
                 ", цвета " + getColor() );
     }
 }
@@ -95,13 +95,13 @@ class Pants extends Clothes implements MaleClothes, FemaleClothes {
 
     @Override
     public void dressMan() {
-        System.out.println("Мужские штаны размера " + getSize().name() + ", стоимостью " + getCost() +
+        System.out.println("Мужские штаны размера " + getSize()+ ", стоимостью " + getCost() +
                 ", цвета " + getColor());
     }
 
     @Override
     public void dressWoman() {
-        System.out.println("Женские штаны размера " + getSize().name() +
+        System.out.println("Женские штаны размера " + getSize() +
                 ", цвета " + getColor() + ", стоимостью " + getCost());
     }
 }
@@ -113,7 +113,7 @@ class Skirt extends Clothes implements FemaleClothes {
 
     @Override
     public void dressWoman() {
-        System.out.println("Женская юбка размера " + getSize().name()  + ", стоимостью " + getCost() +
+        System.out.println("Женская юбка размера " + getSize()  + ", стоимостью " + getCost() +
                 ", цвета " + getColor());
     }
 }
@@ -125,7 +125,7 @@ class Tie extends Clothes implements MaleClothes {
 
     @Override
     public void dressMan() {
-        System.out.println("Мужской галстук размера " + getSize().name() + ", стоимостью " + getCost() +
+        System.out.println("Мужской галстук размера " + getSize() + ", стоимостью " + getCost() +
                 ", цвета " + getColor()) ;
     }
 }
@@ -133,17 +133,17 @@ class Tie extends Clothes implements MaleClothes {
 class Atelier {
     public void dressMan(Clothes[] clothes) {
         System.out.println("Мужская одежда:");
-        for (Clothes c : clothes) {
-            if (c instanceof MaleClothes) {
-                ((MaleClothes) c).dressMan();
+        for (Clothes a : clothes) {
+            if (a instanceof MaleClothes) {
+                ((MaleClothes) a).dressMan();
             }
         }
     }
     public void dressWoman(Clothes[] clothes) {
         System.out.println("Женская одежда:");
-        for (Clothes c : clothes) {
-            if (c instanceof FemaleClothes) {
-                ((FemaleClothes) c).dressWoman();
+        for (Clothes a : clothes) {
+            if (a instanceof FemaleClothes) {
+                ((FemaleClothes) a).dressWoman();
             }
         }
     }
